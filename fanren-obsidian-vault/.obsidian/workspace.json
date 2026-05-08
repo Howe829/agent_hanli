@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "7fdbbf0870a80bee",
+    "type": "split",
+    "children": [
+      {
+        "id": "c42f143a7569de75",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2dc5b693a695e753",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05-场景/山边小村.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "山边小村"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d7b8d5b593d6725a",
+    "type": "split",
+    "children": [
+      {
+        "id": "dce8d129c3f683dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7ebb489320360b00",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "151429f5f26a38b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "619e31e002fd7c58",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2f21bf0e2c9989d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "2542caf733135f09",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d436fdc08f8f573",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "05-场景/山边小村.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "山边小村 的反向链接列表"
+            }
+          },
+          {
+            "id": "7276abc72cf6721e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "05-场景/山边小村.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "山边小村 的出链列表"
+            }
+          },
+          {
+            "id": "926660af5a8365ca",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "b0c0f8dc1f7b728d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "e10db3f9f7cf4b3e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "05-场景/山边小村.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "山边小村 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "2dc5b693a695e753",
+  "lastOpenFiles": [
+    "01-人物/老张叔.md",
+    "09-关系/第一卷第一章人物关系总览.md",
+    "AGENTS.md",
+    "Home.md",
+    "README.md",
+    "08-章节/第一卷第01章 山边小村.md",
+    "05-场景/山边小村.md",
+    "05-场景/韩家.md",
+    "01-人物/韩父.md",
+    "00-总览/index.md",
+    "04-法宝/index.md",
+    "03-功法/index.md",
+    "02-组织/七玄门.md",
+    "01-人物/韩立姐姐.md",
+    "01-人物/韩立大哥.md",
+    "01-人物/韩立.md",
+    "00-总览/log.md",
+    "00-总览/作品总览.md"
+  ]
+}
