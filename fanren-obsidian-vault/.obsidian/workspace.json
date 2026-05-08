@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-总览/log.md",
+                "file": "00-总览/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "log"
+              "title": "index"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00-总览/log.md",
+                "file": "00-总览/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "log 的反向链接列表"
+              "title": "index 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-总览/log.md",
+                "file": "00-总览/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "log 的出链列表"
+              "title": "index 的出链列表"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-总览/log.md",
+                "file": "00-总览/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "log 的大纲"
+              "title": "index 的大纲"
             }
           }
         ]
@@ -185,12 +185,24 @@
   },
   "active": "c480e5a8969d36d8",
   "lastOpenFiles": [
+    "00-总览/作品总览.md",
+    "01-人物/张铁.md",
+    "00-总览/log.md",
+    "02-组织/外刃堂.md",
+    "02-组织/四海堂.md",
+    "02-组织/聚宝堂.md",
+    "02-组织/飞鸟堂.md",
+    "09-关系/第一卷第六章关系总览.md",
+    "02-组织/血刃堂.md",
+    "02-组织/长老会.md",
+    "02-组织/供奉堂.md",
+    "03-功法/无名口诀.md",
+    "01-人物/王陆.md",
     "08-章节/第一卷第06章 无名口诀.md",
     "01-人物/韩立小妹.md",
     "01-人物/马副门主.md",
     "01-人物/吴铭瑞.md",
     "01-人物/韩立.md",
-    "01-人物/张铁.md",
     "01-人物/韩父.md",
     "01-人物/张均.md",
     "01-人物/墨大夫.md",
@@ -198,18 +210,6 @@
     "09-关系/第一卷第五章关系总览.md",
     "05-场景/神手谷.md",
     "02-组织/七绝堂.md",
-    "02-组织/百锻堂.md",
-    "09-关系/第一卷第四章关系总览.md",
-    "09-关系/第一卷第三章关系总览.md",
-    "05-场景/炼骨崖.md",
-    "08-章节/第一卷第04章 炼骨崖.md",
-    "01-人物/岳堂主.md",
-    "01-人物/王护法.md",
-    "00-总览/log.md",
-    "AGENTS.md",
-    "05-场景/百莽山.md",
-    "05-场景/清客院.md",
-    "05-场景/落日峰.md",
-    "05-场景/彩霞山.md"
+    "02-组织/百锻堂.md"
   ]
 }
