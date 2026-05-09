@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e8b2a8b3b98e29c9",
+        "id": "983729f5d3009ede",
         "type": "tabs",
         "children": [
           {
-            "id": "c480e5a8969d36d8",
+            "id": "2939fe81d2820f56",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-总览/index.md",
+                "file": "10-灵虫/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00-总览/index.md",
+                "file": "10-灵虫/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-总览/index.md",
+                "file": "10-灵虫/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-总览/index.md",
+                "file": "10-灵虫/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -183,20 +183,27 @@
       "bases:新建数据库": false
     }
   },
-  "active": "c480e5a8969d36d8",
+  "active": "2939fe81d2820f56",
   "lastOpenFiles": [
+    "03-功法/无名口诀.md",
+    "11-妖兽/index.md",
+    "11-妖兽",
+    "10-灵虫/index.md",
+    "10-灵虫",
+    "07-阵法/index.md",
+    "02-组织/野狼帮.md",
+    "02-组织/长老会.md",
+    "02-组织/外刃堂.md",
+    "00-总览/index.md",
     "00-总览/作品总览.md",
     "01-人物/张铁.md",
     "00-总览/log.md",
-    "02-组织/外刃堂.md",
     "02-组织/四海堂.md",
     "02-组织/聚宝堂.md",
     "02-组织/飞鸟堂.md",
     "09-关系/第一卷第六章关系总览.md",
     "02-组织/血刃堂.md",
-    "02-组织/长老会.md",
     "02-组织/供奉堂.md",
-    "03-功法/无名口诀.md",
     "01-人物/王陆.md",
     "08-章节/第一卷第06章 无名口诀.md",
     "01-人物/韩立小妹.md",
@@ -205,11 +212,6 @@
     "01-人物/韩立.md",
     "01-人物/韩父.md",
     "01-人物/张均.md",
-    "01-人物/墨大夫.md",
-    "08-章节/第一卷第05章 墨大夫.md",
-    "09-关系/第一卷第五章关系总览.md",
-    "05-场景/神手谷.md",
-    "02-组织/七绝堂.md",
-    "02-组织/百锻堂.md"
+    "01-人物/墨大夫.md"
   ]
 }
