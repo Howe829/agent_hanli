@@ -4,24 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "983729f5d3009ede",
+        "id": "d92ae1063f068e71",
         "type": "tabs",
         "children": [
           {
-            "id": "2939fe81d2820f56",
+            "id": "aba7a2ad882fa128",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "845f60e4e067a6b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-灵虫/index.md",
+                "file": "00-总览/章节整理进度.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "章节整理进度"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10-灵虫/index.md",
+                "file": "00-总览/章节整理进度.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "index 的反向链接列表"
+              "title": "章节整理进度 的反向链接列表"
             }
           },
           {
@@ -113,12 +126,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10-灵虫/index.md",
+                "file": "00-总览/章节整理进度.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "index 的出链列表"
+              "title": "章节整理进度 的出链列表"
             }
           },
           {
@@ -156,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10-灵虫/index.md",
+                "file": "00-总览/章节整理进度.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "index 的大纲"
+              "title": "章节整理进度 的大纲"
             }
           }
         ]
@@ -183,35 +196,37 @@
       "bases:新建数据库": false
     }
   },
-  "active": "2939fe81d2820f56",
+  "active": "845f60e4e067a6b9",
   "lastOpenFiles": [
-    "03-功法/无名口诀.md",
-    "11-妖兽/index.md",
-    "11-妖兽",
-    "10-灵虫/index.md",
-    "10-灵虫",
-    "07-阵法/index.md",
-    "02-组织/野狼帮.md",
-    "02-组织/长老会.md",
-    "02-组织/外刃堂.md",
     "00-总览/index.md",
-    "00-总览/作品总览.md",
-    "01-人物/张铁.md",
-    "00-总览/log.md",
-    "02-组织/四海堂.md",
-    "02-组织/聚宝堂.md",
-    "02-组织/飞鸟堂.md",
-    "09-关系/第一卷第六章关系总览.md",
-    "02-组织/血刃堂.md",
-    "02-组织/供奉堂.md",
-    "01-人物/王陆.md",
-    "08-章节/第一卷第06章 无名口诀.md",
-    "01-人物/韩立小妹.md",
-    "01-人物/马副门主.md",
-    "01-人物/吴铭瑞.md",
-    "01-人物/韩立.md",
-    "01-人物/韩父.md",
-    "01-人物/张均.md",
-    "01-人物/墨大夫.md"
+    "08-章节/第一卷第54章 定神符.md",
+    "09-关系/第一卷第七十一章至第八十章关系总览.md",
+    "02-组织/铁枪会.md",
+    "02-组织/断水门.md",
+    "03-功法/御风决.md",
+    "08-章节/第一卷第80章 遇敌.md",
+    "08-章节/第一卷第79章 拷问.md",
+    "08-章节/第一卷第78章 林中杀戮.md",
+    "08-章节/第一卷第77章 对策.md",
+    "08-章节/第一卷第76章 谈判与火起.md",
+    "08-章节/第一卷第75章 法武并用.md",
+    "08-章节/第一卷第74章 御风决.md",
+    "08-章节/第一卷第73章 厉飞雨的心思.md",
+    "08-章节/第一卷第72章 拔毒.md",
+    "08-章节/第一卷第71章 清灵散.md",
+    "09-关系/第一卷第六十一章至第七十章关系总览.md",
+    "01-人物/马荣.md",
+    "01-人物/李长老.md",
+    "01-人物/张袖儿.md",
+    "03-功法/天眼术.md",
+    "03-功法/火弹术.md",
+    "04-法宝/引魂钟.md",
+    "04-法宝/曲魂.md",
+    "08-章节/第一卷第70章 挑拨.md",
+    "08-章节/第一卷第69章 厉飞雨与少女.md",
+    "未命名.canvas",
+    "12-丹药",
+    "11-妖兽",
+    "10-灵虫"
   ]
 }
