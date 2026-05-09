@@ -25,16 +25,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-总览/章节整理进度.md",
+                "file": "00-总览/log.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "章节整理进度"
+              "title": "log"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00-总览/章节整理进度.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "章节整理进度 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -126,12 +124,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-总览/章节整理进度.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "章节整理进度 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -169,13 +166,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-总览/章节整理进度.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "章节整理进度 的大纲"
+              "title": "大纲"
             }
           }
         ]
@@ -196,8 +192,20 @@
       "bases:新建数据库": false
     }
   },
-  "active": "845f60e4e067a6b9",
+  "active": "aba7a2ad882fa128",
   "lastOpenFiles": [
+    "01-人物/钱长老.md",
+    "01-人物/赵长老.md",
+    "05-场景/七玄殿.md",
+    "05-场景/落沙坡.md",
+    "04-法宝/秦氏族谱.md",
+    "04-法宝/升仙令牌.md",
+    "06-符箓/金光罩符.md",
+    "03-功法/驱物术.md",
+    "03-功法/魔银手.md",
+    "03-功法/罗烟步.md",
+    "00-总览/log.md",
+    "00-总览/章节整理进度.md",
     "09-关系/第一卷第九十一章至第九十八章关系总览.md",
     "09-关系/第一卷第八十一章至第九十章关系总览.md",
     "06-符箓/剑符.md",
@@ -212,18 +220,6 @@
     "08-章节/第一卷第93章 烈火焚敌.md",
     "08-章节/第一卷第92章 剑符.md",
     "08-章节/第一卷第91章 抢宝.md",
-    "08-章节/第一卷第90章 飞剑?.md",
-    "08-章节/第一卷第89章 矛与盾.md",
-    "08-章节/第一卷第88章 金光罩.md",
-    "08-章节/第一卷第87章 略显身手.md",
-    "08-章节/第一卷第86章 突变.md",
-    "08-章节/第一卷第85章 死契血斗.md",
-    "08-章节/第一卷第84章 地动山摇.md",
-    "08-章节/第一卷第83章 大陷阱.md",
-    "08-章节/第一卷第82章 金光上人.md",
-    "08-章节/第一卷第81章 贾天龙.md",
-    "00-总览/index.md",
-    "08-章节/第一卷第54章 定神符.md",
     "未命名.canvas",
     "12-丹药",
     "11-妖兽",
