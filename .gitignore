@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Obsidian local state (not needed for wiki content)
+fanren-obsidian-vault/.obsidian/
