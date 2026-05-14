@@ -69,3 +69,7 @@ fanren-obsidian-vault/
 ## 维护日志
 
 详见 `fanren-obsidian-vault/log.md`。
+
+## 声明
+
+原始资料来源于互联网，献给热爱凡人的道友们。如有侵权请联系删除。
