@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>凡人修仙传 第一卷 七玄门风云</title>
+    <style>
+      :root {
+        --bg: #12100f;
+        --surface: #1d1917;
+        --fg: #f2eadf;
+        --muted: #bda88b;
+        --accent: #d2a35c;
+        --accent-2: #6f8f7c;
+        --danger: #c55a4f;
+        --line: rgba(210, 163, 92, 0.32);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: "Songti SC", "STSong", serif;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 20% 20%, rgba(210, 163, 92, 0.12), transparent 32%),
+          radial-gradient(circle at 80% 25%, rgba(111, 143, 124, 0.08), transparent 26%),
+          radial-gradient(circle at 50% 80%, rgba(197, 90, 79, 0.08), transparent 30%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 35%),
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size:
+          auto,
+          auto,
+          auto,
+          auto,
+          100% 100%,
+          100% 100%;
+        opacity: 0.95;
+        pointer-events: none;
+      }
+
+      body::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 248, 239, 0.025), rgba(255, 248, 239, 0.025)),
+          repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 2px,
+            rgba(255, 255, 255, 0.015) 3px,
+            transparent 4px
+          );
+        mix-blend-mode: screen;
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      #stage {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(25, 21, 18, 0.92), rgba(18, 16, 15, 0.98)),
+          var(--bg);
+      }
+
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+
+      .scene {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+      }
+
+      .eyebrow {
+        position: absolute;
+        top: 88px;
+        left: 110px;
+        font-family: "PingFang SC", "Helvetica Neue", sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.28em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .title {
+        position: absolute;
+        top: 208px;
+        left: 110px;
+        width: 1020px;
+        font-family: "PingFang SC", "Helvetica Neue", sans-serif;
+        font-size: 104px;
+        line-height: 0.96;
+        letter-spacing: 0.01em;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .title .accent {
+        color: var(--accent);
+      }
+
+      .title .jade {
+        color: var(--accent-2);
+      }
+
+      .deck {
+        position: absolute;
+        left: 110px;
+        bottom: 198px;
+        width: 860px;
+        font-size: 28px;
+        line-height: 1.56;
+        color: rgba(242, 234, 223, 0.88);
+        margin: 0;
+      }
+
+      .meta-column {
+        position: absolute;
+        top: 154px;
+        right: 110px;
+        width: 470px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .meta-card {
+        border: 2px solid var(--line);
+        background: rgba(33, 28, 24, 0.6);
+        padding: 22px 24px;
+        backdrop-filter: blur(6px);
+      }
+
+      .meta-label {
+        font-family: "PingFang SC", "Helvetica Neue", sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.24em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .meta-value {
+        font-family: "PingFang SC", "Helvetica Neue", sans-serif;
+        font-size: 40px;
+        line-height: 1.08;
+        font-weight: 600;
+      }
+
+      .meta-copy {
+        font-size: 21px;
+        line-height: 1.5;
+        color: rgba(242, 234, 223, 0.78);
+      }
+
+      .footer-bar {
+        position: absolute;
+        left: 110px;
+        right: 110px;
+        bottom: 76px;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 14px;
+        border-top: 2px solid rgba(210, 163, 92, 0.18);
+      }
+
+      .footer-copy {
+        font-family: "PingFang SC", "Helvetica Neue", sans-serif;
+        font-size: 18px;
+        color: rgba(242, 234, 223, 0.76);
+        letter-spacing: 0.08em;
+      }
+
+      .footer-mark {
+        font-family: "PingFang SC", "Helvetica Neue", sans-serif;
+        font-size: 18px;
+        color: var(--accent);
+        letter-spacing: 0.22em;
+      }
+
+      .ghost {
+        position: absolute;
+        font-family: "PingFang SC", "Helvetica Neue", sans-serif;
+        font-weight: 700;
+        line-height: 0.9;
+        color: rgba(242, 234, 223, 0.05);
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .ghost.left {
+        top: 120px;
+        left: 70px;
+        font-size: 210px;
+      }
+
+      .ghost.right {
+        right: 70px;
+        bottom: 90px;
+        font-size: 184px;
+        color: rgba(210, 163, 92, 0.06);
+      }
+
+      .slash {
+        position: absolute;
+        width: 2px;
+        height: 620px;
+        top: 180px;
+        left: 66%;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(210, 163, 92, 0.85),
+          transparent
+        );
+        transform: rotate(14deg);
+        transform-origin: center;
+        opacity: 0.7;
+      }
+
+      .pulse-ring {
+        position: absolute;
+        border: 2px solid rgba(111, 143, 124, 0.32);
+        border-radius: 50%;
+        filter: blur(0.2px);
+      }
+
+      .pulse-ring.r1 {
+        width: 380px;
+        height: 380px;
+        right: 170px;
+        top: 160px;
+      }
+
+      .pulse-ring.r2 {
+        width: 520px;
+        height: 520px;
+        right: 100px;
+        top: 90px;
+        border-color: rgba(210, 163, 92, 0.18);
+      }
+
+      .danger .title .accent,
+      .danger .footer-mark,
+      .danger .meta-value.emphasis {
+        color: var(--danger);
+      }
+
+      .danger .slash {
+        background: linear-gradient(180deg, transparent, rgba(197, 90, 79, 0.9), transparent);
+      }
+
+      .village .ghost.right,
+      .return .ghost.right {
+        color: rgba(111, 143, 124, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="stage"
+      data-composition-id="fanren-volume-1"
+      data-start="0"
+      data-duration="42"
+      data-width="1920"
+      data-height="1080"
+    >
+      <section id="scene-1" class="clip scene village" data-start="0" data-duration="5.5" data-track-index="0">
+        <div class="ghost left">山边小村</div>
+        <div class="ghost right">离开</div>
+        <div class="slash"></div>
+        <div class="eyebrow">VOLUME I / BEAT 01</div>
+        <h1 class="title">一个<span class="accent">山村少年</span><br />被推出命运之外</h1>
+        <div class="meta-column">
+          <div class="meta-card">
+            <div class="meta-label">起点</div>
+            <div class="meta-value">贫寒农家<br />韩家老四</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">触发事件</div>
+            <div class="meta-copy">三叔回村，带来进入七玄门的机会。韩立第一次离开熟悉的小世界。</div>
+          </div>
+        </div>
+        <p class="deck">
+          他不是天选之子，也没有人替他铺路。第一卷真正的出发点，只是一个孩子不甘心永远困在村口。
+        </p>
+        <div class="footer-bar">
+          <div class="footer-copy">第1-5章 / 从山边小村到炼骨崖</div>
+          <div class="footer-mark">凡人起步</div>
+        </div>
+      </section>
+
+      <section id="scene-2" class="clip scene" data-start="5.5" data-duration="5.5" data-track-index="0">
+        <div class="ghost left">墨大夫</div>
+        <div class="ghost right">神手谷</div>
+        <div class="slash"></div>
+        <div class="pulse-ring r1"></div>
+        <div class="pulse-ring r2"></div>
+        <div class="eyebrow">VOLUME I / BEAT 02</div>
+        <h1 class="title">入门失败，<span class="accent">却被更危险的人</span>带走</h1>
+        <div class="meta-column">
+          <div class="meta-card">
+            <div class="meta-label">异常师徒</div>
+            <div class="meta-value">教你<br />也养着你</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">不安感</div>
+            <div class="meta-copy">神手谷里有医术、有禁令、有无名口诀，也有一层始终说不清的控制关系。</div>
+          </div>
+        </div>
+        <p class="deck">
+          炼骨崖上没登顶，韩立本该出局。可真正改变他命运的，不是成功，而是墨大夫那只伸过来的手。
+        </p>
+        <div class="footer-bar">
+          <div class="footer-copy">第6-9章 / 无名口诀与神手谷</div>
+          <div class="footer-mark">疑云入局</div>
+        </div>
+      </section>
+
+      <section id="scene-3" class="clip scene" data-start="11" data-duration="6" data-track-index="0">
+        <div class="ghost left">小瓶</div>
+        <div class="ghost right">绿液</div>
+        <div class="slash"></div>
+        <div class="pulse-ring r1"></div>
+        <div class="pulse-ring r2"></div>
+        <div class="eyebrow">VOLUME I / BEAT 03</div>
+        <h1 class="title">神秘<span class="jade">小瓶</span>到手<br />韩立终于有了自己的底牌</h1>
+        <div class="meta-column">
+          <div class="meta-card">
+            <div class="meta-label">命数偏转</div>
+            <div class="meta-value">吸月光<br />生绿液</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">真正变化</div>
+            <div class="meta-copy">从这一刻起，韩立不再只是被安排的人。他开始偷偷试验、藏牌、准备第二条路。</div>
+          </div>
+        </div>
+        <p class="deck">
+          四年沉默修炼，表面是听命，实际是积蓄。第一卷最重要的宝物，不只是小瓶，而是小瓶带来的主动权。
+        </p>
+        <div class="footer-bar">
+          <div class="footer-copy">第10-27章 / 小瓶、灵药、四年沉默</div>
+          <div class="footer-mark">暗线成形</div>
+        </div>
+      </section>
+
+      <section id="scene-4" class="clip scene danger" data-start="17" data-duration="6.5" data-track-index="0">
+        <div class="ghost left">夺舍</div>
+        <div class="ghost right">尸虫丸</div>
+        <div class="slash"></div>
+        <div class="eyebrow">VOLUME I / BEAT 04</div>
+        <h1 class="title">墨大夫摊牌：<span class="accent">收你为徒</span><br />是为了拿你的命续他的命</h1>
+        <div class="meta-column">
+          <div class="meta-card">
+            <div class="meta-label">第一次大反转</div>
+            <div class="meta-value emphasis">真相<br />比敌意更可怕</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">韩立学到的事</div>
+            <div class="meta-copy">修仙世界还未真正登场，生存规则却已经写清楚了：别人会拿你的未来，去填自己的绝境。</div>
+          </div>
+        </div>
+        <p class="deck">
+          墨大夫不是平面的恶人。他更像一个被修仙世界碾坏的人，而韩立第一次看见了自己未来最可怕的反面。
+        </p>
+        <div class="footer-bar">
+          <div class="footer-copy">第28-64章 / 墨居仁、余子童、曲魂</div>
+          <div class="footer-mark">局中局</div>
+        </div>
+      </section>
+
+      <section id="scene-5" class="clip scene" data-start="23.5" data-duration="6" data-track-index="0">
+        <div class="ghost left">厉飞雨</div>
+        <div class="ghost right">法武并用</div>
+        <div class="slash"></div>
+        <div class="eyebrow">VOLUME I / BEAT 05</div>
+        <h1 class="title">朋友、交易、秘技、法术<br /><span class="accent">韩立开始自己布局</span></h1>
+        <div class="meta-column">
+          <div class="meta-card">
+            <div class="meta-label">卷一最暖的人</div>
+            <div class="meta-value">厉飞雨</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">能力升级</div>
+            <div class="meta-copy">御风决配罗烟步，火弹术近战化。韩立第一次把江湖手段和修仙手段拧成一股绳。</div>
+          </div>
+        </div>
+        <p class="deck">
+          第一卷后半段真正迷人的地方，是韩立不再只会躲。他开始交易、试探、借力、藏招，慢慢夺回主动。
+        </p>
+        <div class="footer-bar">
+          <div class="footer-copy">第65-75章 / 韩神医与厉飞雨</div>
+          <div class="footer-mark">人情与锋芒</div>
+        </div>
+      </section>
+
+      <section id="scene-6" class="clip scene danger" data-start="29.5" data-duration="7.5" data-track-index="0">
+        <div class="ghost left">火魔</div>
+        <div class="ghost right">死契血斗</div>
+        <div class="slash"></div>
+        <div class="eyebrow">VOLUME I / BEAT 06</div>
+        <h1 class="title">死契血斗里<br />一个凡人少年<span class="accent">杀出了火魔之名</span></h1>
+        <div class="meta-column">
+          <div class="meta-card">
+            <div class="meta-label">终极高潮</div>
+            <div class="meta-value emphasis">野狼帮<br />金光上人</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">第一次全开底牌</div>
+            <div class="meta-copy">曲魂、火弹术、剑符、金光罩，在这一战里同时亮相。韩立第一次不再只是活下来，而是反过来主宰杀局。</div>
+          </div>
+        </div>
+        <p class="deck">
+          这一卷最适合被记住的，不是谁赢了，而是一个曾经被人圈养的孩子，第一次把别人的局烧成了自己的出路。
+        </p>
+        <div class="footer-bar">
+          <div class="footer-copy">第76-95章 / 谈判、设局、反杀全场</div>
+          <div class="footer-mark">火起七玄</div>
+        </div>
+      </section>
+
+      <section id="scene-7" class="clip scene return" data-start="37" data-duration="5" data-track-index="0">
+        <div class="ghost left">回村</div>
+        <div class="ghost right">修仙者</div>
+        <div class="slash"></div>
+        <div class="eyebrow">VOLUME I / FINAL BEAT</div>
+        <h1 class="title">他回到了小村<br />但已经<span class="accent">不是原来那个人</span></h1>
+        <div class="meta-column">
+          <div class="meta-card">
+            <div class="meta-label">卷终状态</div>
+            <div class="meta-value">离开七玄门<br />走向修仙界</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">第一卷真正完成的事</div>
+            <div class="meta-copy">韩立没有学会热血，他学会了怀疑、忍耐和活下去。这才是后来那个韩立的起点。</div>
+          </div>
+        </div>
+        <p class="deck">
+          从“想出去看看”，到“知道世界会吃人”。第一卷结束时，韩立的名字还很小，但他的生存方式已经定型。
+        </p>
+        <div class="footer-bar">
+          <div class="footer-copy">第96-98章 / 火魔传闻与回村</div>
+          <div class="footer-mark">第一卷 七玄门风云</div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const tl = gsap.timeline({ paused: true });
+      const scenes = [
+        { id: "#scene-1", start: 0, end: 5.1 },
+        { id: "#scene-2", start: 5.5, end: 10.6 },
+        { id: "#scene-3", start: 11, end: 16.4 },
+        { id: "#scene-4", start: 17, end: 22.8 },
+        { id: "#scene-5", start: 23.5, end: 29.1 },
+        { id: "#scene-6", start: 29.5, end: 36.6 },
+        { id: "#scene-7", start: 37, end: 41.6 }
+      ];
+
+      scenes.forEach((scene) => {
+        const root = scene.id;
+        tl.from(
+          `${root} .ghost.left`,
+          { x: -120, opacity: 0, duration: 0.8, ease: "power3.out" },
+          scene.start
+        );
+        tl.from(
+          `${root} .ghost.right`,
+          { x: 120, opacity: 0, duration: 0.8, ease: "power3.out" },
+          scene.start + 0.05
+        );
+        tl.from(
+          `${root} .slash`,
+          { scaleY: 0.2, opacity: 0, duration: 0.7, ease: "sine.out" },
+          scene.start + 0.08
+        );
+        tl.from(
+          `${root} .eyebrow`,
+          { y: 32, opacity: 0, duration: 0.45, ease: "power2.out" },
+          scene.start + 0.15
+        );
+        tl.from(
+          `${root} .title`,
+          { y: 56, opacity: 0, duration: 0.85, ease: "power3.out" },
+          scene.start + 0.28
+        );
+        tl.from(
+          `${root} .deck`,
+          { y: 40, opacity: 0, duration: 0.65, ease: "power2.out" },
+          scene.start + 0.56
+        );
+        tl.from(
+          `${root} .meta-card`,
+          { x: 48, opacity: 0, duration: 0.6, stagger: 0.14, ease: "power2.out" },
+          scene.start + 0.44
+        );
+        tl.from(
+          `${root} .footer-bar`,
+          { y: 26, opacity: 0, duration: 0.45, ease: "power2.out" },
+          scene.start + 0.76
+        );
+
+        tl.to(
+          `${root} .ghost.left`,
+          { x: -90, opacity: 0, duration: 0.45, ease: "power2.in" },
+          scene.end
+        );
+        tl.to(
+          `${root} .ghost.right`,
+          { x: 90, opacity: 0, duration: 0.45, ease: "power2.in" },
+          scene.end
+        );
+        tl.to(
+          `${root} .title, ${root} .deck`,
+          { y: -30, opacity: 0, duration: 0.42, ease: "power2.in" },
+          scene.end + 0.05
+        );
+        tl.to(
+          `${root} .meta-card, ${root} .footer-bar, ${root} .eyebrow, ${root} .slash`,
+          { y: -12, opacity: 0, duration: 0.35, ease: "power2.in" },
+          scene.end + 0.12
+        );
+      });
+
+      tl.to(
+        ".pulse-ring.r1",
+        { scale: 1.08, opacity: 0.75, duration: 1.4, ease: "sine.inOut" },
+        5.8
+      );
+      tl.to(
+        ".pulse-ring.r2",
+        { scale: 1.05, opacity: 0.6, duration: 1.6, ease: "sine.inOut" },
+        6
+      );
+      tl.to(
+        "#scene-3 .pulse-ring.r1",
+        { scale: 1.16, borderColor: "rgba(111, 143, 124, 0.54)", duration: 1.5, ease: "sine.inOut" },
+        11.2
+      );
+      tl.to(
+        "#scene-3 .pulse-ring.r2",
+        { scale: 1.1, borderColor: "rgba(210, 163, 92, 0.36)", duration: 1.8, ease: "sine.inOut" },
+        11.4
+      );
+      tl.to(
+        "#scene-6 .slash",
+        { rotate: 22, opacity: 1, duration: 0.5, ease: "power2.out" },
+        30.1
+      );
+
+      window.__timelines["fanren-volume-1"] = tl;
+    </script>
+  </body>
+</html>
